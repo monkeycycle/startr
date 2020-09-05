@@ -4,12 +4,22 @@
 #
 ############################################################
 
-options(scipen = 999)
-Sys.setenv(TZ = 'America/Toronto')
-
+############################################################
 # Project-specific
-config_author <- 'Firstname Lastname <firstlast@globeandmail.com>'
-config_title <- 'startr'
+############################################################
+config_author <- 'Michael Pereira <michael.pereira@freepress.mb.ca>'
+config_title <- 'wfp-'
+
+# Source files and urls
+
+############################################################
+
+
+############################################################
+
+# load_dot_env(file = ".env")
+options(scipen = 999)
+Sys.setenv(TZ = "America/Winnipeg")
 
 # Directories to read from and write to
 dir_data <- 'data'
@@ -20,9 +30,7 @@ dir_data_processed <- 'data/processed'
 dir_data_out <- 'data/out'
 dir_reports <- 'reports'
 dir_plots <- 'plots'
-
-# Files: You'll want to edit this to add your source data file names
-sample.raw.file <- here::here(dir_data_raw, 'sample.csv')
+dir_gis <- 'gis'
 
 # Primary and supplemental notebooks.
 # Set should_render_notebook to TRUE if using notebooks
@@ -41,32 +49,10 @@ timestamp_output_files <- FALSE
 # Should the variables created during process.R be cleaned up after processing?
 clean_processing_variables <- TRUE
 
-packages <- c(
-  # essentials
-  'here', 'devtools', 'tidyverse',
-  # manipulation
-  'lubridate', 'janitor', 'zoo', 'glue', 'clipr', 
-  # modelling
-  'tidymodels',
-  # Read/write files
-  'readxl', 'openxlsx', 'feather',
-  # visualization
-  'scales', 'ggthemes', 'gganimate',
-  # scraping
-  'rvest',
-  # GIS
-  'sf',
-  # RMarkdown
-  'knitr', 'ezknitr', 'kableExtra', 'DT',
-  # other stuff
-  # 'cansim', 'cancensus',
-  'beepr'
-)
-
-source(here::here(dir_src, 'utils.R'))
-source(here::here(dir_src, 'functions.R'))
-
-load_requirements(packages)
+############################################################
+# Load Open Sans from Google so they are available
+############################################################
+font_add_google(name = "Open Sans", family = "Open Sans", regular.wt = 400, bold.wt = 700)
 
 options(
   # CANCENSUS_API should be set in your home directory's .Renviron file,
