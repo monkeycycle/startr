@@ -19,7 +19,8 @@ packages <- c(
   "jsonlite", "RColorBrewer",
   "rgdal", "ggthemes", "cowplot",
   "broom", "mapproj", "viridisLite",
-  "sf", "ggspatial", "viridis", "classInt"
+  "sf", "ggspatial", "viridis", "classInt",
+  "pammtools", "zip"
   # "viridis"
   # "geojsonR", "geojsonio",
   # "RJSONIO",

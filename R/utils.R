@@ -174,7 +174,8 @@ write_plot <- function(variable, filename = NA, width = NA, height = NA, format 
     dpi = default_dpi,
     width = width,
     height = height,
-    limitsize = default_limitsize
+    limitsize = default_limitsize,
+    type = "cairo"
   )
 
   if (default_format == 'pdf') args[['useDingbats']] <- FALSE
